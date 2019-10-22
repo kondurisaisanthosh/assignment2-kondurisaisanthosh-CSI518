@@ -1,0 +1,19 @@
+  <div class="row float-right">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="city" [(ngModel)]="city" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchRestaurants()"> Search</button>
+    </form>
+  </div>
+<br>
+<br>
+<div class="row card border-success mb-3" *ngFor="let restaurant of restarants">
+  <div class="card-header bg-transparent border-success">{{restaurant.name}}</div>
+  <div class="card-body text-success">
+    <p class="card-title">Rating:{{restaurant.rating}}</p>
+    <p class="card-title">Adress:{{restaurant.formatted_address}}</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">
+      <a [routerLink]="['/restaurantprofile']" routerLinkActive="router-link-active" class="btn btn-primary"
+      (click)="showRestaurantProfile(restaurant)">View Profile</a>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+    <img src="{{currentRestaurant.icon}}" alt="No image found">
+    <h2>{{currentRestaurant.name}}</h2>
+    <p>Rating:{{currentRestaurant.rating}}</p>
+    <p>Adress:{{currentRestaurant.formatted_address}}</p>
+
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-primary"
+    (click)="backtoSearchResults()">Back to Search</a>
