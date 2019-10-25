@@ -14,7 +14,7 @@ const keyString='&key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0'
 
 // Get all posts
 router.get('/data', (req, res) => {
-  let a=api+req.query.place+keyString;
+  let a=api+req.query.+keyString;
   // Get posts from the mock api
   // This should ideally be replaced with a service that connects to MongoDB
   axios.get(a)
