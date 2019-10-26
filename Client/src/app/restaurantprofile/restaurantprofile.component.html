@@ -1,10 +1,7 @@
-    <!-- <img src="{{currentRestaurant.icon}}" alt="No image found"> -->
-    <!-- <img src="https://developers.google.com/places/web-service/photos?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=100&photo_reference=CmRaAAAAf6654galf_lSrjxehxZKSh5KS2AL40yfZDs88H6bYQKd0OqIivMkkOaNF8cptPb1Yd1YkUB_eZX82nHwlbCenwXPHRwP9mjj_QA0NaH9UfQ3oNtGXNwk6AcUA5SIVznFEhCCMMY2lpN43IIotkyWTj1lGhSdGV_D6Q6bkYsz3eVSodjHkqsW7A" alt="No Image Found"> -->
-    <!-- <img src="{{'https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=100&photo_reference='+{{currentRestaurant.photos[0].photo_reference}}" > -->
-
-    <h2>{{currentRestaurant.name}}</h2>
-    <p>Rating:{{currentRestaurant.rating}}</p>
-    <p>Adress:{{currentRestaurant.formatted_address}}</p>
+<h2>{{currentRestaurant.name}}</h2>
+<img src="https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}" height="200px" width="400px">
+    <p><b>Rating :</b>{{currentRestaurant.rating}}</p>
+    <p><b>Address:</b>{{currentRestaurant.formatted_address}}</p>
 
     <a [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-primary"
     (click)="backtoSearchResults()">Back to Search</a>

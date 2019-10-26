@@ -17,5 +17,6 @@ export class RestaurantAPIService {
 
   setRestaurant(profile: any) {
     this.profile = profile;
+    console.log(this.profile.photos[0].photo_reference);
     }
 }

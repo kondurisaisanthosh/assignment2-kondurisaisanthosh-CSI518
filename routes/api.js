@@ -16,7 +16,7 @@ router.get('/data', (req, res) => {
   // This should ideally be replaced with a service that connects to MongoDB
   axios.get(a)
     .then(posts => {
-      console.log(posts.data);
+      //console.log(posts.data);
       res.status(200).json(posts.data);
     })
     .catch(error => {

@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("    <!-- <img src=\"{{currentRestaurant.icon}}\" alt=\"No image found\"> -->\n    <!-- <img src=\"https://developers.google.com/places/web-service/photos?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=100&photo_reference=CmRaAAAAf6654galf_lSrjxehxZKSh5KS2AL40yfZDs88H6bYQKd0OqIivMkkOaNF8cptPb1Yd1YkUB_eZX82nHwlbCenwXPHRwP9mjj_QA0NaH9UfQ3oNtGXNwk6AcUA5SIVznFEhCCMMY2lpN43IIotkyWTj1lGhSdGV_D6Q6bkYsz3eVSodjHkqsW7A\" alt=\"No Image Found\"> -->\n    <!-- <img src=\"{{'https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=100&photo_reference='+{{currentRestaurant.photos[0].photo_reference}}\" > -->\n\n    <h2>{{currentRestaurant.name}}</h2>\n    <p>Rating:{{currentRestaurant.rating}}</p>\n    <p>Adress:{{currentRestaurant.formatted_address}}</p>\n\n    <a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a>");
+/* harmony default export */ __webpack_exports__["default"] = ("<img src=\"https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}\" height=\"200px\" width=\"400px\">\n\n    <h2>{{currentRestaurant.name}}</h2>\n    <p>Rating:{{currentRestaurant.rating}}</p>\n    <p>Adress:{{currentRestaurant.formatted_address}}</p>\n\n    <a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a>");
 
 /***/ }),
 
@@ -463,6 +463,7 @@ let RestaurantAPIService = class RestaurantAPIService {
     }
     setRestaurant(profile) {
         this.profile = profile;
+        console.log(this.profile.photos[0].photo_reference);
     }
 };
 RestaurantAPIService.ctorParameters = () => [
@@ -579,10 +580,11 @@ __webpack_require__.r(__webpack_exports__);
 let RestaurantprofileComponent = class RestaurantprofileComponent {
     constructor(_restProf) {
         this._restProf = _restProf;
+        this.photoAPI = "https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=100&photo_reference=";
     }
     ngOnInit() {
         this.currentRestaurant = this._restProf.profile;
-        console.log(this.currentRestaurant.name);
+        this.photo = this.currentRestaurant.photos[0].photo_reference;
     }
 };
 RestaurantprofileComponent.ctorParameters = () => [
