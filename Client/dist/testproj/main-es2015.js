@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<img src=\"https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}\" height=\"200px\" width=\"400px\">\n\n    <h2>{{currentRestaurant.name}}</h2>\n    <p>Rating:{{currentRestaurant.rating}}</p>\n    <p>Adress:{{currentRestaurant.formatted_address}}</p>\n\n    <a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h2>{{currentRestaurant.name}}</h2>\n<img src=\"https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}\" height=\"200px\" width=\"400px\">\n    <p><b>Rating :</b>{{currentRestaurant.rating}}</p>\n    <p><b>Address:</b>{{currentRestaurant.formatted_address}}</p>\n\n    <a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a>");
 
 /***/ }),
 
