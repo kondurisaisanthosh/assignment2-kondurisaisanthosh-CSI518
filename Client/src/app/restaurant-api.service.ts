@@ -17,5 +17,5 @@ export class RestaurantAPIService {
 
   setRestaurant(profile: any) {
     this.profile = profile;
-  }
+    }
 }

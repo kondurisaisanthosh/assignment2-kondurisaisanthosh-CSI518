@@ -7,14 +7,11 @@ const axios = require('axios');
 
 const api='https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+';
 const keyString='&key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0'
-/* GET api listing. */
-// router.get('/', (req, res) => {
-//   res.send('api works');
-// });
+
 
 // Get all posts
 router.get('/data', (req, res) => {
-  let a=api+req.query.+keyString;
+  let a=api+req.query.place+keyString;
   // Get posts from the mock api
   // This should ideally be replaced with a service that connects to MongoDB
   axios.get(a)
