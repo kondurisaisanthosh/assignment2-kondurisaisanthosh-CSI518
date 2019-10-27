@@ -11,10 +11,10 @@
 <div class="row d-flex justify-content-center">
   <div class="row card border-success mb-3 container col-md-6" *ngFor="let restaurant of restarants">
       <div class="card-header bg-transparent text-success text-uppercase">{{restaurant.name}}</div>
-      <div class="card-body border-success"> 
-        <p class="card-title">Rating:{{restaurant.rating}}</p>
+      <!-- <div class="card-body border-success"> 
+         <p class="card-title">Rating:{{restaurant.rating}}</p>
         <p class="card-title">Adress:{{restaurant.formatted_address}}</p>
-      </div>
+      </div> -->
       <div class="card-footer bg-transparent border-success">
           <a [routerLink]="['/restaurantprofile']" routerLinkActive="router-link-active" class="btn btn-primary"
           (click)="showRestaurantProfile(restaurant)">View Profile</a>
