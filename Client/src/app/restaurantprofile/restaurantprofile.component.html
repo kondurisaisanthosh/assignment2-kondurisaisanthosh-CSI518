@@ -1,7 +1,8 @@
-<h2>{{currentRestaurant.name}}</h2>
+<h2 style="text-align: center;">{{currentRestaurant.name}}</h2>
+<p style="text-align: center;">
 <img src="https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}" height="200px" width="400px">
-    <p><b>Rating :</b>{{currentRestaurant.rating}}</p>
-    <p><b>Address:</b>{{currentRestaurant.formatted_address}}</p>
-
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-primary"
-    (click)="backtoSearchResults()">Back to Search</a>
+</p>
+<p style="text-align: center;"><b>Rating :</b>{{currentRestaurant.rating}}</p>
+<p style="text-align: center;"><b>Address:</b>{{currentRestaurant.formatted_address}}</p>
+<p style="text-align: center;"><a [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-primary"
+    (click)="backtoSearchResults()">Back to Search</a></p>

@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("  <div class=\"row float-right\">\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" name=\"city\" [(ngModel)]=\"city\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" (click)=\"searchRestaurants()\"> Search</button>\n    </form>\n  </div>\n<br>\n<br>\n\n\n<div class=\"row d-flex justify-content-center\">\n  <div class=\"row card border-success mb-3 container col-md-6\" *ngFor=\"let restaurant of restarants\">\n      <div class=\"card-header bg-transparent text-success text-uppercase\">{{restaurant.name}}</div>\n      <!-- <div class=\"card-body border-success\"> \n         <p class=\"card-title\">Rating:{{restaurant.rating}}</p>\n        <p class=\"card-title\">Adress:{{restaurant.formatted_address}}</p>\n      </div> -->\n      <div class=\"card-footer bg-transparent border-success\">\n          <a [routerLink]=\"['/restaurantprofile']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n          (click)=\"showRestaurantProfile(restaurant)\">View Profile</a>\n      </div>\n    </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("  <div class=\"row float-right\">\n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" name=\"city\" [(ngModel)]=\"city\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" (click)=\"searchRestaurants()\"> Search</button>\n    </form>\n  </div>\n<br>\n<br>\n\n\n<!-- <div class=\"row d-flex justify-content-center\">\n  <div class=\"row card border-success mb-3 container col-md-6\" *ngFor=\"let restaurant of restarants\">\n      <div class=\"card-header bg-transparent text-success text-uppercase\">{{restaurant.name}}</div>\n      <!-- <div class=\"card-body border-success\"> \n         <p class=\"card-title\">Rating:{{restaurant.rating}}</p>\n        <p class=\"card-title\">Adress:{{restaurant.formatted_address}}</p>\n      </div> -->\n      <!-- <div class=\"card-footer bg-transparent border-success\">\n          <a [routerLink]=\"['/restaurantprofile']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n          (click)=\"showRestaurantProfile(restaurant)\">View Profile</a>\n      </div>\n    </div>\n</div> --> \n\n<div class=\"card bg-light mb-3\" *ngFor=\"let restaurant of restarants\">\n  <div class=\"card-header bg-transparent text-success text-uppercase\" >{{restaurant.name}}</div>\n  <div class=\"card-body\">\n    <a [routerLink]=\"['/restaurantprofile']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n          (click)=\"showRestaurantProfile(restaurant)\">View Profile</a>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h2>{{currentRestaurant.name}}</h2>\n<img src=\"https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}\" height=\"200px\" width=\"400px\">\n    <p><b>Rating :</b>{{currentRestaurant.rating}}</p>\n    <p><b>Address:</b>{{currentRestaurant.formatted_address}}</p>\n\n    <a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 style=\"text-align: center;\">{{currentRestaurant.name}}</h2>\n<p style=\"text-align: center;\">\n<img src=\"https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyDVQgKy2v09Yce_891pEigZOOpfgC6kra0&maxheight=200&photo_reference={{photo}}\" height=\"200px\" width=\"400px\">\n</p>\n<p style=\"text-align: center;\"><b>Rating :</b>{{currentRestaurant.rating}}</p>\n<p style=\"text-align: center;\"><b>Address:</b>{{currentRestaurant.formatted_address}}</p>\n<p style=\"text-align: center;\"><a [routerLink]=\"['/']\" routerLinkActive=\"router-link-active\" class=\"btn btn-primary\"\n    (click)=\"backtoSearchResults()\">Back to Search</a></p>");
 
 /***/ }),
 
@@ -667,7 +667,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/santoshkonduri/Downloads/Restaurants/Client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/santoshkonduri/Downloads/RestaurantApp/Client/src/main.ts */"./src/main.ts");
 
 
 /***/ })

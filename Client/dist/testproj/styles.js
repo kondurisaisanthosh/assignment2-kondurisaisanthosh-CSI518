@@ -376,8 +376,8 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/santoshkonduri/Downloads/Restaurants/Client/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /Users/santoshkonduri/Downloads/Restaurants/Client/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /Users/santoshkonduri/Downloads/RestaurantApp/Client/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/santoshkonduri/Downloads/RestaurantApp/Client/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })
